@@ -7,13 +7,13 @@
   ],
   "orientation": "any",
   "id": "./",
-  "name": "Natural Health — Hidup Sehat Secara Alami",
-  "short_name": "Natural",
-  "description": "Natural Health: panduan dan produk herbal alami untuk tubuh sehat, pikiran tenang, dan hidup seimbang.",
+  "name": "Natural Health | Wellness Guides & Product Research",
+  "short_name": "Natural Health",
+  "description": "Independent wellness guides, ingredient explainers, and thoughtful product research for everyday decisions.",
   "start_url": "./",
   "scope": "./",
-  "background_color": "#2f5d3a",
-  "theme_color": "#2f5d3a",
+  "background_color": "#faf9f4",
+  "theme_color": "#284e39",
   "icons": [
     {
       "src": "icons/icon-192.png",

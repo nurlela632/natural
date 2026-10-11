@@ -1,0 +1,38 @@
+{
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui",
+    "browser"
+  ],
+  "orientation": "any",
+  "id": "./",
+  "name": "Natural Health — Hidup Sehat Secara Alami",
+  "short_name": "Natural",
+  "description": "Natural Health: panduan dan produk herbal alami untuk tubuh sehat, pikiran tenang, dan hidup seimbang.",
+  "start_url": "./",
+  "scope": "./",
+  "background_color": "#2f5d3a",
+  "theme_color": "#2f5d3a",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "generator": "Natural Health"
+}

@@ -39,8 +39,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Natural Health — Hidup Sehat Secara Alami</title>
-<meta name="description" content="Natural Health: panduan dan produk herbal alami untuk tubuh sehat, pikiran tenang, dan hidup seimbang.">
+<title>Natural Health — Pilihan Herbal & Kebiasaan Sehat</title>
+<meta name="description" content="Temukan ide hidup sehat, ulasan produk herbal, dan rekomendasi pilihan yang bisa Anda pertimbangkan sebelum membeli.">
 <meta name="theme-color" content="#2f5d3a">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,7 +74,9 @@ tailwind.config = {
   .hero-dot.active { background: #fff; }
   .hero-btn { background: rgba(255,255,255,0.2); border: none; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(4px); transition: background 0.3s; }
   .hero-btn:hover { background: rgba(255,255,255,0.4); }
-  .tip-read-more { position: absolute; bottom: 1rem; right: 1rem; bg-white/10 hover:bg-white/20 text-white text-xs font-medium px-3 py-1.5 rounded-full transition; }
+  .tip-read-more { position: absolute; bottom: 1rem; right: 1rem; background: rgba(255,255,255,.1); color: white; font-size: .75rem; font-weight: 500; padding: .375rem .75rem; border-radius: 9999px; transition: background .2s; }
+  .tip-read-more:hover { background: rgba(255,255,255,.2); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } .hero-slides { transition: none; } }
 </style>
     <!-- puter-pwa: generated, do not edit -->
     <link rel="manifest" href="manifest.json">
@@ -101,7 +103,7 @@ tailwind.config = {
       <a href="#testimoni" class="hover:text-leaf-700">Testimoni</a>
       <a href="#faq" class="hover:text-leaf-700">FAQ</a>
     </nav>
-    <a href="#kontak" class="hidden md:inline-flex items-center gap-2 bg-leaf-700 hover:bg-leaf-900 text-white text-sm font-medium px-4 py-2 rounded-full transition">Konsultasi Gratis</a>
+    <a href="#kontak" class="hidden md:inline-flex items-center gap-2 bg-leaf-700 hover:bg-leaf-900 text-white text-sm font-medium px-4 py-2 rounded-full transition">Tentang Rekomendasi</a>
     <button id="menuBtn" class="md:hidden p-2" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
   </div>
   <div id="mobileMenu" class="hidden md:hidden bg-cream border-t border-leaf-100 px-5 py-4 space-y-3 text-sm">
@@ -110,7 +112,7 @@ tailwind.config = {
     <a href="#tips" class="block">Tips Sehat</a>
     <a href="#testimoni" class="block">Testimoni</a>
     <a href="#faq" class="block">FAQ</a>
-    <a href="#kontak" class="block bg-leaf-700 text-white text-center py-2 rounded-full">Konsultasi Gratis</a>
+    <a href="#kontak" class="block bg-leaf-700 text-white text-center py-2 rounded-full">Tentang Rekomendasi</a>
   </div>
 </header>
 
@@ -119,7 +121,7 @@ tailwind.config = {
   <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
     <div class="reveal">
       <span class="inline-flex items-center gap-2 text-xs font-medium bg-leaf-100 text-leaf-700 px-3 py-1.5 rounded-full" data-hero-badge>
-        <i data-lucide="sprout" class="w-3.5 h-3.5"></i> 100% Bahan Alami & Organik
+        <i data-lucide="sprout" class="w-3.5 h-3.5"></i> Inspirasi hidup sehat sehari-hari
       </span>
       <h1 class="font-serif text-4xl md:text-6xl font-semibold leading-[1.1] mt-5" data-hero-title>
         Kesehatan Alami untuk <span class="text-leaf-600 italic">Hidup</span> yang Lebih Seimbang
@@ -136,11 +138,11 @@ tailwind.config = {
         </a>
       </div>
       <div class="mt-10 flex items-center gap-8">
-        <div><p class="font-serif text-3xl font-semibold">25rb+</p><p class="text-sm text-leaf-900/60">Pelanggan puas</p></div>
+        <div><p class="font-serif text-3xl font-semibold">12</p><p class="text-sm text-leaf-900/60">Pilihan produk</p></div>
         <div class="w-px h-10 bg-leaf-200"></div>
-        <div><p class="font-serif text-3xl font-semibold">4.9/5</p><p class="text-sm text-leaf-900/60">Rating ulasan</p></div>
+        <div><p class="font-serif text-3xl font-semibold">6</p><p class="text-sm text-leaf-900/60">Ide hidup sehat</p></div>
         <div class="w-px h-10 bg-leaf-200 hidden sm:block"></div>
-        <div class="hidden sm:block"><p class="font-serif text-3xl font-semibold">BPOM</p><p class="text-sm text-leaf-900/60">Terdaftar resmi</p></div>
+        <div class="hidden sm:block"><p class="font-serif text-3xl font-semibold">Panduan</p><p class="text-sm text-leaf-900/60">Baca sebelum membeli</p></div>
       </div>
     </div>
     <div class="reveal relative">
@@ -152,7 +154,7 @@ tailwind.config = {
       </div>
       <div class="absolute -bottom-5 -left-5 bg-white border border-leaf-100 rounded-2xl p-4 flex items-center gap-3">
         <span class="w-10 h-10 rounded-full bg-leaf-100 text-leaf-700 grid place-items-center"><i data-lucide="shield-check" class="w-5 h-5"></i></span>
-        <div><p class="text-sm font-semibold">Tanpa Bahan Kimia</p><p class="text-xs text-leaf-900/60">Diuji laboratorium</p></div>
+        <div><p class="text-sm font-semibold">Pilih dengan bijak</p><p class="text-xs text-leaf-900/60">Cek komposisi & izin edar</p></div>
       </div>
       <div class="absolute top-6 -right-3 md:-right-6 bg-leaf-700 text-white rounded-2xl px-4 py-3">
         <p class="text-xs opacity-80">Bersumber dari</p><p class="text-sm font-semibold">Petani Lokal</p>
@@ -252,7 +254,7 @@ tailwind.config = {
       <h2 class="font-serif text-3xl md:text-4xl font-semibold mt-3">Kebiasaan kecil, dampak besar</h2>
     </div>
     <div id="tipsGrid" class="mt-12 grid md:grid-cols-3 gap-6"></div>
-    <div class="mt-12 text-center"><a href="/tips" class="text-sm text-leaf-200 hover:text-white transition">Lihat Semua Tips →</a></div>
+    <div class="mt-12 text-center"><a href="#tips" class="text-sm text-leaf-200 hover:text-white transition">Lihat Semua Tips →</a></div>
   </div>
 </section>
 
@@ -261,33 +263,12 @@ tailwind.config = {
   <div class="max-w-6xl mx-auto px-5">
     <div class="text-center max-w-2xl mx-auto reveal">
       <p class="text-sm font-medium text-leaf-600 uppercase tracking-wider">Testimoni</p>
-      <h2 class="font-serif text-3xl md:text-4xl font-semibold mt-3">Cerita nyata dari pelanggan kami</h2>
+      <h2 class="font-serif text-3xl md:text-4xl font-semibold mt-3">Apa yang perlu dipertimbangkan sebelum membeli</h2>
     </div>
     <div class="mt-12 grid md:grid-cols-3 gap-6">
-      <figure class="reveal bg-white border border-leaf-100 rounded-2xl p-6">
-        <div class="flex gap-0.5 text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-        <blockquote class="mt-4 text-leaf-900/80">"Sejak rutin minum jamu kunyit asam, badan terasa lebih segar dan jarang masuk angin. Rasanya juga enak!"</blockquote>
-        <figcaption class="mt-6 flex items-center gap-3">
-          <span class="w-10 h-10 rounded-full bg-leaf-100 text-leaf-700 grid place-items-center font-semibold">SR</span>
-          <div><p class="font-semibold text-sm">Siti Rahma</p><p class="text-xs text-leaf-900/60">Ibu rumah tangga, Bandung</p></div>
-        </figcaption>
-      </figure>
-      <figure class="reveal bg-white border border-leaf-100 rounded-2xl p-6">
-        <div class="flex gap-0.5 text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-        <blockquote class="mt-4 text-leaf-900/80">"Teh chamomile-nya membantu sekali untuk tidur saya yang sering terganggu karena kerja shift malam."</blockquote>
-        <figcaption class="mt-6 flex items-center gap-3">
-          <span class="w-10 h-10 rounded-full bg-leaf-100 text-leaf-700 grid place-items-center font-semibold">BP</span>
-          <div><p class="font-semibold text-sm">Budi Prasetyo</p><p class="text-xs text-leaf-900/60">Perawat, Surabaya</p></div>
-        </figcaption>
-      </figure>
-      <figure class="reveal bg-white border border-leaf-100 rounded-2xl p-6">
-        <div class="flex gap-0.5 text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-        <blockquote class="mt-4 text-leaf-900/80">"Pengiriman cepat, kemasannya rapi dan ramah lingkungan. Konsultasi gratisnya juga sangat membantu."</blockquote>
-        <figcaption class="mt-6 flex items-center gap-3">
-          <span class="w-10 h-10 rounded-full bg-leaf-100 text-leaf-700 grid place-items-center font-semibold">DA</span>
-          <div><p class="font-semibold text-sm">Dewi Anggraini</p><p class="text-xs text-leaf-900/60">Desainer, Jakarta</p></div>
-        </figcaption>
-      </figure>
+      <article class="reveal bg-white border border-leaf-100 rounded-2xl p-6"><h3 class="font-semibold text-lg">Baca labelnya dulu</h3><p class="mt-3 text-sm text-leaf-900/70">Perhatikan bahan, petunjuk pemakaian, peringatan, serta izin edar bila berlaku. Jangan hanya terpikat kemasan atau ulasan singkat.</p></article>
+      <article class="reveal bg-white border border-leaf-100 rounded-2xl p-6"><h3 class="font-semibold text-lg">Sesuaikan kebutuhan</h3><p class="mt-3 text-sm text-leaf-900/70">Produk yang cocok untuk seseorang belum tentu cocok untuk orang lain. Pertimbangkan alergi, kondisi kesehatan, dan obat yang sedang digunakan.</p></article>
+      <article class="reveal bg-white border border-leaf-100 rounded-2xl p-6"><h3 class="font-semibold text-lg">Bandingkan sebelum checkout</h3><p class="mt-3 text-sm text-leaf-900/70">Cek ukuran, harga per kemasan, reputasi penjual, dan kebijakan pengembalian. Pilihan terbaik tidak selalu yang paling mahal.</p></article>
     </div>
   </div>
 </section>
@@ -314,43 +295,21 @@ tailwind.config = {
       </details>
       <details class="reveal bg-white border border-leaf-100 rounded-2xl p-5">
         <summary class="flex justify-between items-center cursor-pointer font-semibold">Bagaimana jika saya tidak puas?<i data-lucide="chevron-down" class="chev w-5 h-5 transition"></i></summary>
-        <p class="mt-3 text-sm text-leaf-900/70">Kami memberikan garansi uang kembali 30 hari tanpa banyak pertanyaan.</p>
+        <p class="mt-3 text-sm text-leaf-900/70">Periksa kebijakan pengembalian di situs penjual sebelum melakukan transaksi.</p>
       </details>
     </div>
   </div>
 </section>
 
-<!-- CTA / Kontak -->
+<!-- Transparansi affiliate -->
 <section id="kontak" class="py-20 md:py-28">
   <div class="max-w-6xl mx-auto px-5">
-    <div class="reveal bg-leaf-700 text-white rounded-[2rem] p-8 md:p-14 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 class="font-serif text-3xl md:text-4xl font-semibold">Mulai perjalanan sehat alami Anda hari ini</h2>
-        <p class="mt-4 text-white/75">Dapatkan konsultasi gratis dengan ahli herbal kami dan diskon 15% untuk pembelian pertama.</p>
-        <ul class="mt-6 space-y-2 text-sm text-white/85">
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> Rekomendasi produk sesuai kebutuhan</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> Panduan pola makan & gaya hidup</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> Tanpa biaya, tanpa komitmen</li>
-        </ul>
-      </div>
-      <form id="leadForm" class="bg-white text-leaf-900 rounded-2xl p-6 space-y-4">
-        <div>
-          <label class="text-sm font-medium" for="nama">Nama lengkap</label>
-          <input id="nama" required class="mt-1 w-full border border-leaf-100 rounded-xl px-4 py-3 text-sm outline-none focus:border-leaf-500" placeholder="Nama Anda">
-        </div>
-        <div>
-          <label class="text-sm font-medium" for="email">Email</label>
-          <input id="email" type="email" required class="mt-1 w-full border border-leaf-100 rounded-xl px-4 py-3 text-sm outline-none focus:border-leaf-500" placeholder="nama@email.com">
-        </div>
-        <div>
-          <label class="text-sm font-medium" for="kebutuhan">Fokus kesehatan</label>
-          <select id="kebutuhan" class="mt-1 w-full border border-leaf-100 rounded-xl px-4 py-3 text-sm outline-none focus:border-leaf-500 bg-white">
-            <option>Daya tahan tubuh</option><option>Kualitas tidur</option><option>Pencernaan</option><option>Energi & stamina</option><option>Lainnya</option>
-          </select>
-        </div>
-        <button class="w-full bg-leaf-700 hover:bg-leaf-900 text-white font-medium py-3 rounded-xl transition">Dapatkan Konsultasi Gratis</button>
-        <p id="formMsg" class="hidden text-sm text-leaf-600 flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Terima kasih! Tim kami akan menghubungi Anda segera.</p>
-      </form>
+    <div class="reveal bg-leaf-700 text-white rounded-[2rem] p-8 md:p-14">
+      <p class="text-sm uppercase tracking-wider text-leaf-200">Tentang rekomendasi kami</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-semibold mt-3">Belanja lebih tenang dimulai dari informasi yang jelas</h2>
+      <p class="mt-4 text-white/85 max-w-3xl">Natural Health adalah halaman kurasi dan informasi, bukan toko atau layanan konsultasi medis. Beberapa tautan produk dapat berupa tautan afiliasi: jika Anda membeli melalui tautan tersebut, kami mungkin menerima komisi tanpa biaya tambahan untuk Anda. Harga, ketersediaan, dan ketentuan mengikuti toko tujuan.</p>
+      <p class="mt-4 text-sm text-white/75 max-w-3xl">Konten di sini bersifat informasi umum, bukan pengganti nasihat tenaga kesehatan. Selalu periksa komposisi, keamanan, dan izin edar produk sebelum membeli atau menggunakannya.</p>
+      <a href="#produk" class="mt-7 inline-flex bg-white text-leaf-900 font-semibold px-6 py-3 rounded-full hover:bg-leaf-50 transition">Lihat pilihan produk →</a>
     </div>
   </div>
 </section>
@@ -363,7 +322,7 @@ tailwind.config = {
         <span class="w-8 h-8 rounded-lg bg-leaf-700 text-white grid place-items-center"><i data-lucide="leaf" class="w-4 h-4"></i></span>
         Natural Health
       </a>
-      <p class="mt-4 text-leaf-900/60 max-w-sm">Membantu Anda hidup lebih sehat dengan kekuatan alam, sejak 2015.</p>
+      <p class="mt-4 text-leaf-900/60 max-w-sm">Berbagi ide kebiasaan sehat dan membantu Anda membandingkan pilihan produk dengan lebih cermat.</p>
     </div>
     <div>
       <p class="font-semibold">Navigasi</p>
@@ -377,9 +336,9 @@ tailwind.config = {
     <div>
       <p class="font-semibold">Kontak</p>
       <ul class="mt-3 space-y-2 text-leaf-900/60">
-        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> halo@naturalhealth.id</li>
-        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> 0812-3456-7890</li>
-        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Yogyakarta, Indonesia</li>
+        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> Kontak penjual tersedia di halaman produk</li>
+        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Tautan mitra sedang disiapkan</li>
+        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Informasi dan kurasi produk</li>
       </ul>
     </div>
   </div>
@@ -396,20 +355,20 @@ import { createIcons, icons } from 'https://cdn.jsdelivr.net/npm/lucide@latest/+
 
 const products = [
   // Herbal
-  { name: 'Jamu Kunyit Asam', cat: 'herbal', price: 45000, tag: 'Terlaris', img: 'https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=700&q=80', desc: 'Menyegarkan & mendukung pencernaan.', affiliateUrl: 'https://shop.naturalhealth.id/jamu-kunyit-asam' },
-  { name: 'Kapsul Temulawak', cat: 'herbal', price: 75000, tag: '', img: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=700&q=80', desc: 'Menjaga kesehatan hati & nafsu makan.', affiliateUrl: 'https://shop.naturalhealth.id/kapsul-temulawak' },
-  { name: 'Sirup Ekstrak Daun Binca', cat: 'herbal', price: 58000, tag: 'Baru', img: 'https://images.unsplash.com/photo-1593651733231-e67e7b3b8b80?w=700&q=80', desc: 'Menyegarkan tenggorokan & mengurangi batuk.', affiliateUrl: 'https://shop.naturalhealth.id/sirup-binca' },
-  { name: 'Kunyit Merah Organik', cat: 'herbal', price: 39000, tag: '', img: 'https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=700&q=80', desc: 'Anti-inflamasi alami untuk peradangan.', affiliateUrl: 'https://shop.naturalhealth.id/kunyit-merah' },
+  { name: 'Jamu Kunyit Asam', cat: 'herbal', price: 45000, tag: 'Terlaris', img: 'https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=700&q=80', desc: 'Menyegarkan & mendukung pencernaan.', affiliateUrl: '#' },
+  { name: 'Kapsul Temulawak', cat: 'herbal', price: 75000, tag: '', img: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=700&q=80', desc: 'Menjaga kesehatan hati & nafsu makan.', affiliateUrl: '#' },
+  { name: 'Sirup Ekstrak Daun Binca', cat: 'herbal', price: 58000, tag: 'Baru', img: 'https://images.unsplash.com/photo-1593651733231-e67e7b3b8b80?w=700&q=80', desc: 'Menyegarkan tenggorokan & mengurangi batuk.', affiliateUrl: '#' },
+  { name: 'Kunyit Merah Organik', cat: 'herbal', price: 39000, tag: '', img: 'https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=700&q=80', desc: 'Anti-inflamasi alami untuk peradangan.', affiliateUrl: '#' },
   // Teh
-  { name: 'Teh Chamomile Organik', cat: 'teh', price: 65000, tag: '', img: 'https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?w=700&q=80', desc: 'Menenangkan untuk tidur nyenyak.', affiliateUrl: 'https://shop.naturalhealth.id/teh-chamomile' },
-  { name: 'Teh Hijau Jahe Lemon', cat: 'teh', price: 55000, tag: '', img: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=700&q=80', desc: 'Antioksidan tinggi & penghangat tubuh.', affiliateUrl: 'https://shop.naturalhealth.id/teh-hijau-jahe' },
-  { name: 'Teh Melokhya Herbal', cat: 'teh', price: 48000, tag: 'Favorit', img: 'https://images.unsplash.com/photo-1514432346048-9f426738b548?w=700&q=80', desc: 'Mengandalkan serat & gizi rendah kalori.', affiliateUrl: 'https://shop.naturalhealth.id/teh-melokhya' },
-  { name: 'Teh Rooibos Vanilla', cat: 'teh', price: 62000, tag: '', img: 'https://images.unsplash.com/photo-1497493633698-9c17ab122218?w=700&q=80', desc: 'Tanpa kafein, aromatik, & menyehatkan.', affiliateUrl: 'https://shop.naturalhealth.id/teh-rooibos-vanilla' },
+  { name: 'Teh Chamomile Organik', cat: 'teh', price: 65000, tag: '', img: 'https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?w=700&q=80', desc: 'Menenangkan untuk tidur nyenyak.', affiliateUrl: '#' },
+  { name: 'Teh Hijau Jahe Lemon', cat: 'teh', price: 55000, tag: '', img: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=700&q=80', desc: 'Antioksidan tinggi & penghangat tubuh.', affiliateUrl: '#' },
+  { name: 'Teh Melokhya Herbal', cat: 'teh', price: 48000, tag: 'Favorit', img: 'https://images.unsplash.com/photo-1514432346048-9f426738b548?w=700&q=80', desc: 'Mengandalkan serat & gizi rendah kalori.', affiliateUrl: '#' },
+  { name: 'Teh Rooibos Vanilla', cat: 'teh', price: 62000, tag: '', img: 'https://images.unsplash.com/photo-1497493633698-9c17ab122218?w=700&q=80', desc: 'Tanpa kafein, aromatik, & menyehatkan.', affiliateUrl: '#' },
   // Minyak Esensial
-  { name: 'Minyak Lavender Murni', cat: 'minyak', price: 89000, tag: '', img: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=700&q=80', desc: 'Aromaterapi relaksasi & anti-stres.', affiliateUrl: 'https://shop.naturalhealth.id/minyak-lavender' },
-  { name: 'Minyak Kayu Putih Premium', cat: 'minyak', price: 49000, tag: 'Favorit', img: 'https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=700&q=80', desc: 'Melegakan napas & menghangatkan.', affiliateUrl: 'https://shop.naturalhealth.id/minyak-kayu-putih' },
-  { name: 'Minyak Eucalyptus Forest', cat: 'minyak', price: 59000, tag: '', img: 'https://images.unsplash.com/photo-1593651733231-e67e7b3b8b80?w=700&q=80', desc: 'Membuka paru-paru & menyegarkan napas.', affiliateUrl: 'https://shop.naturalhealth.id/minyak-eucalyptus' },
-  { name: 'Minyak Rosmarin Vitalitas', cat: 'minyak', price: 72000, tag: 'Baru', img: 'https://images.unsplash.com/photo-1594834220321-7e0f85d0a7c9?w=700&q=80', desc: 'Meningkatkan daya ingat & konsentrasi.', affiliateUrl: 'https://shop.naturalhealth.id/minyak-rosemary' },
+  { name: 'Minyak Lavender Murni', cat: 'minyak', price: 89000, tag: '', img: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=700&q=80', desc: 'Aromaterapi relaksasi & anti-stres.', affiliateUrl: '#' },
+  { name: 'Minyak Kayu Putih Premium', cat: 'minyak', price: 49000, tag: 'Favorit', img: 'https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=700&q=80', desc: 'Melegakan napas & menghangatkan.', affiliateUrl: '#' },
+  { name: 'Minyak Eucalyptus Forest', cat: 'minyak', price: 59000, tag: '', img: 'https://images.unsplash.com/photo-1593651733231-e67e7b3b8b80?w=700&q=80', desc: 'Membuka paru-paru & menyegarkan napas.', affiliateUrl: '#' },
+  { name: 'Minyak Rosmarin Vitalitas', cat: 'minyak', price: 72000, tag: 'Baru', img: 'https://images.unsplash.com/photo-1594834220321-7e0f85d0a7c9?w=700&q=80', desc: 'Meningkatkan daya ingat & konsentrasi.', affiliateUrl: '#' },
 ];
 
 const healthTips = [
@@ -420,7 +379,7 @@ const healthTips = [
     readTime: '5 menit baca',
     title: 'Makan Pelangi: Kunci Nutrisi Seimbang',
     desc: 'Variasikan warna sayur dan buah untuk mendapat spektrum vitamin yang lengkap.',
-    url: '/tips/makan-pelangi'
+    url: '#tips'
   },
   {
     img: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=700&q=80',
@@ -429,7 +388,7 @@ const healthTips = [
     readTime: '4 menit baca',
     title: '10 Menit Pernapasan Pagi Hari',
     desc: 'Latihan napas sederhana untuk menurunkan stres dan meningkatkan fokus.',
-    url: '/tips/pernapasan-pagi'
+    url: '#tips'
   },
   {
     img: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=700&q=80',
@@ -438,7 +397,7 @@ const healthTips = [
     readTime: '6 menit baca',
     title: 'Ritual Tidur Alami Tanpa Obat',
     desc: 'Teh chamomile, lavender, dan rutinitas malam untuk tidur lebih nyenyak.',
-    url: '/tips/ritual-tidur'
+    url: '#tips'
   },
   {
     img: 'https://images.unsplash.com/photo-1511974033332-e790a5c2c4a3?w=700&q=80',
@@ -447,7 +406,7 @@ const healthTips = [
     readTime: '3 menit baca',
     title: 'Air Putih: Teman Setia Tubuh',
     desc: 'Minum cukup air putih setiap hari membantu pencernaan, metabolisme, dan kulit cerah.',
-    url: '/tips/air-putih'
+    url: '#tips'
   },
   {
     img: 'https://images.unsplash.com/photo-1559723209-438545cc9c85?w=700&q=80',
@@ -456,7 +415,7 @@ const healthTips = [
     readTime: '7 menit baca',
     title: 'Suplementasi Cerdas: Apa yang Perlu Anda Konsumsi?',
     desc: 'Pahami kapan Anda perlu tambahan vitamin dan mineral serta cara memilih suplemen berkualitas.',
-    url: '/tips/suplemen'
+    url: '#tips'
   },
   {
     img: 'https://images.unsplash.com/photo-1526256299451-ebc6c3f19af5?w=700&q=80',
@@ -465,7 +424,7 @@ const healthTips = [
     readTime: '4 menit baca',
     title: '5.000 Langkah sehari itu Nyata',
     desc: 'Mulailah dengan langkah kaki kecil setiap pagi; aktivitas fisik ringan jauh lebih baik daripada tidak sama sekali.',
-    url: '/tips/jalan-kaki'
+    url: '#tips'
   },
 ];
 
@@ -528,9 +487,12 @@ function heroGo(i) {
 document.getElementById('heroPrev').addEventListener('click', () => heroGo(heroIdx - 1));
 document.getElementById('heroNext').addEventListener('click', () => heroGo(heroIdx + 1));
 dotsEl.addEventListener('click', e => { const d = e.target.closest('.hero-dot'); if (d) heroGo(+d.dataset.i); });
-let heroTimer = setInterval(() => heroGo(heroIdx + 1), 5000);
+let heroTimer;
+const startHeroTimer = () => { clearInterval(heroTimer); if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && !document.hidden) heroTimer = setInterval(() => heroGo(heroIdx + 1), 5000); };
+startHeroTimer();
 document.getElementById('heroCarousel').addEventListener('mouseenter', () => clearInterval(heroTimer));
-document.getElementById('heroCarousel').addEventListener('mouseleave', () => heroTimer = setInterval(() => heroGo(heroIdx + 1), 5000));
+document.getElementById('heroCarousel').addEventListener('mouseleave', startHeroTimer);
+document.addEventListener('visibilitychange', () => document.hidden ? clearInterval(heroTimer) : startHeroTimer());
 
 const rp = n => 'Rp' + n.toLocaleString('id-ID');
 const grid = document.getElementById('productGrid');
@@ -550,7 +512,7 @@ function render(f) {
         <div class="mt-4 flex items-center justify-between">
           <span class="font-serif text-lg font-semibold">${rp(p.price)}</span>
           <a href="${p.affiliateUrl || '#'}" target="_blank" rel="noopener noreferrer" data-name="${p.name}" class="add buy-now inline-flex items-center justify-center gap-1.5 text-sm bg-leaf-700 hover:bg-leaf-900 text-white font-medium px-4 py-2 rounded-full transition">
-            <i data-lucide="shopping-cart" class="w-4 h-4"></i> Buy Now
+            <i data-lucide="shopping-cart" class="w-4 h-4"></i> Cek produk
           </a>
         </div>
       </div>
@@ -579,16 +541,12 @@ grid.addEventListener('click', e => {
     const href = b.getAttribute('href');
     if (href === '#' || !href) {
       e.preventDefault();
-      showToast(b.dataset.name + ' - Link affiliate belum tersedia');
+      showToast(b.dataset.name + ' - Tautan mitra belum tersedia. Silakan cek kembali nanti');
     }
   }
 });
 
-document.getElementById('leadForm').addEventListener('submit', e => {
-  e.preventDefault();
-  document.getElementById('formMsg').classList.remove('hidden');
-  e.target.reset();
-});
+
 
 document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('hidden'));
 document.querySelectorAll('#mobileMenu a').forEach(a => a.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden')));
@@ -614,8 +572,8 @@ if (tipsGrid) {
         <h3 class="font-semibold text-lg mt-2">${t.title}</h3>
         <p class="text-sm text-white/65 mt-2">${t.desc}</p>
       </div>
-      <a href="${t.url}" target="_blank" rel="noopener noreferrer" class="absolute bottom-4 right-4 bg-white/10 hover:bg-white/20 text-white text-xs font-medium px-3 py-1.5 rounded-full transition">
-        Read More
+      <a href="${t.url}" class="absolute bottom-4 right-4 bg-white/10 hover:bg-white/20 text-white text-xs font-medium px-3 py-1.5 rounded-full transition">
+        Baca ringkasan
       </a>
     </article>
   `).join('');
@@ -624,8 +582,7 @@ if (tipsGrid) {
 }
 
 document.getElementById('yr').textContent = new Date().getFullYear();
-try { createIcons({ icons }); } catch(e) { console.log('Icon init deferred'); }
-createIcons({ icons });
+try { createIcons({ icons }); } catch(e) { console.warn('Ikon gagal dimuat', e); }
 </script>
 </body>
 </html>
